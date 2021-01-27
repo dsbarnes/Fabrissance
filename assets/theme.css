@@ -3864,11 +3864,23 @@ hr {
 .article-listing {
   padding-top: 55px;
   margin-bottom: 55px; 
+
+  /* Specific to my early setup */
+  /* Expect this to effect further pages that are not made yet */
+
   /* min-height: 420px; */ }
   .article-listing div{
     display: inline-block; 
     max-width: 550px; 
     vertical-align: middle; }
+  .article-listing .h3{
+    margin-bottom: 42px;
+  }
+  .article-listing .rte{ 
+    margin-left: 42px; }
+  .article-listing .rte ul{
+    position: relative;
+    top: 20px; }
 
 .article {
   margin-bottom: 55px; }
@@ -5547,7 +5559,7 @@ hr {
       line-height: 46px; } }
 
 .site-footer {
-  margin-top: 55px;
+  margin-top: 255px;
   padding: 45px 0 55px 0; }
   @media only screen and (min-width: 750px) {
     .site-footer {
