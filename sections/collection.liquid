@@ -1,7 +1,7 @@
 <div class="page-width">
   {% if section.settings.title != blank %}
     <div class="section-header text-center">
-      <h2>{{ section.settings.title | escape }}</h2>
+      <h2><a href="{{ section.settings.url }}">{{ section.settings.title | escape }}</a></h2>
     </div>
   {% endif %}
 
@@ -164,6 +164,13 @@
         "vi": "Bộ sưu tập",
         "zh-CN": "收藏",
         "zh-TW": "商品系列"
+      }
+    },
+    {
+      "type": "url",
+      "id": "url",
+      "label": {
+        "en": "Link to collection"
       }
     },
     {

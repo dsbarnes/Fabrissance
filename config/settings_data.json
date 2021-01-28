@@ -13,6 +13,7 @@
         "type": "header",
         "settings": {
           "align_logo": "center",
+          "logo": "shopify:\/\/shop_images\/Fabrissance-Logo.png",
           "logo_max_width": 100,
           "main_linklist": "main-menu",
           "message": false,
