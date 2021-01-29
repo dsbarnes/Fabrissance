@@ -3866,13 +3866,16 @@ hr {
   margin-bottom: 55px; }
   .article-listing div{
     display: inline-block; 
-    max-width: 550px; 
+    max-width: 48%;
     vertical-align: middle; }
+    @media only screen and (max-width: 605px){
+      .article-listing div{
+        max-width: 80%; } }
   .article-listing .h3{
     margin-bottom: 42px; }
-    @media only screen and (min-width: 750px){
+    @media only screen and (max-width: 750px){
       .article-listing .h3 {
-        margin-bottom: 400px; } }
+        margin-left: 42px; } }
   .article-listing .rte{ 
     margin-left: 42px; }
   .article-listing .rte ul{
