@@ -2288,9 +2288,6 @@ hr {
 .grid--view-items {
   overflow: auto;
   margin-bottom: -35px; }
-  .homepage-product-flex{
-    display: flex;
-    justify-content: space-evenly; }
 
 .grid-view-item {
   margin: 0 auto 35px; }
