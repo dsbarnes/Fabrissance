@@ -3863,19 +3863,16 @@ hr {
 
 .article-listing {
   padding-top: 55px;
-  margin-bottom: 55px; 
-
-  /* Specific to my early setup */
-  /* Expect this to effect further pages that are not made yet */
-
-  /* min-height: 420px; */ }
+  margin-bottom: 55px; }
   .article-listing div{
     display: inline-block; 
     max-width: 550px; 
     vertical-align: middle; }
   .article-listing .h3{
-    margin-bottom: 42px;
-  }
+    margin-bottom: 42px; }
+    @media only screen and (min-width: 750px){
+      .article-listing .h3 {
+        margin-bottom: 400px; } }
   .article-listing .rte{ 
     margin-left: 42px; }
   .article-listing .rte ul{
@@ -4011,22 +4008,19 @@ hr {
     top: 0; }
 
 .article__list-image-container {
-  /* display: block; */
-  /* clear: both; */
   position: relative;
   min-height: 1px;
-  /* width: 100%; */
   height: 100%; }
 
 .article__list-image-wrapper {
-  /* width: 100%; */
   margin-bottom: 20px; }
 
 .article__list-image {
   margin: 0 auto;
-  /* width: 100%; */
-  /* position: absolute; */
   top: 0; }
+  @media only screen and (max-width: 750px){
+    .article__list-image{ 
+      margin-left: 42px; } }
 
 /*============================================================================
   Blog/article card
