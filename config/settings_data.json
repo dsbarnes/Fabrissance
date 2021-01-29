@@ -29,7 +29,7 @@
           "image": "shopify:\/\/shop_images\/groom-adjusting-cufflinks.jpg",
           "alignment": "top",
           "hero_layout": "full_width",
-          "hero_size": "medium",
+          "hero_size": "large",
           "text_size": "large",
           "title": "",
           "text": "",
@@ -93,6 +93,7 @@
         "settings": {
           "title": "Codename: Test",
           "collection": "costume-one",
+          "url": "shopify:\/\/collections\/costume-one",
           "grid": 4,
           "rows": 1,
           "show_vendor": false,
@@ -216,6 +217,7 @@
         "settings": {
           "title": "Codename: Grunge 91",
           "collection": "collection-two",
+          "url": "shopify:\/\/collections\/collection-two",
           "grid": 4,
           "rows": 1,
           "show_vendor": false,
