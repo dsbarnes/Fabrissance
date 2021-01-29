@@ -310,9 +310,7 @@
                             {% if inline_list %}list--inline{% endif %}">
                     {%- for link in linklists[footer_linklist].links -%}
                       <li class="site-footer__linklist-item">
-                        <a href="{{ link.url }}"
-                          {% if link.current %} aria-current="page"{% endif %}
-                        >
+                        <a href="{{ link.url }}" {% if link.current %} aria-current="page"{% endif %}>
                           {{ link.title | escape }}
                         </a>
                       </li>
@@ -325,9 +323,16 @@
         </div>
       {%- endfor -%}
     </div>
-      <div class="grid__item small--one-whole {{ copyright_show_class }} site-footer-item-align-right">
-        <small class="site-footer__copyright-content">&copy; {{ 'now' | date: "%Y" }}, {{ shop.name | link_to: routes.root_url }}</small>
-      </div>
+
+    <div>
+      {% for link in linklists[section.settings.footer_linklist].links %}
+        <p><a href="{{ link.url }}"> {{ link.title }} </a></p>
+      {% endfor %}
+    </div>
+
+    <div class="grid__item small--one-whole {{ copyright_show_class }} site-footer-item-align-right">
+      <small class="site-footer__copyright-content">&copy; {{ 'now' | date: "%Y" }}, {{ shop.name | link_to: routes.root_url }}</small>
+    </div>
   </div>
 
 </footer>
@@ -650,6 +655,14 @@
         "zh-TW": "顯示幣別選擇器"
       },
       "default": true
+    },
+    {
+      "type": "link_list",
+      "id": "footer_linklist",
+      "label": {
+        "en": "Menu"
+      },
+      "default": "footer"
     }
   ],
   "blocks": [
