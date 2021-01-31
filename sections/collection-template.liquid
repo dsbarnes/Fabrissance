@@ -54,10 +54,13 @@
       {% endif %}
     {% else %}
       <div class="page-width">
-        <div class="section-header text-center">
+        <div class="section-header text-left" style="margin-bottom: 84px;">
+          <h1>FABRISSANCE</h1>
           <h1>
               <span class="visually-hidden">{{ 'collections.general.collection_label' | t }}: </span>
-              {{ collection.title }}
+              {% if collection.title == 'Products' %}
+                Full Catalog {% else %} {{ collection.title }}
+              {% endif %}
           </h1>
           {% if collection.description != blank %}
             <div class="rte">

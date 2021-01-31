@@ -1104,9 +1104,20 @@ textarea {
 
 .section-header {
   margin-bottom: 35px; }
+  /* For homepage */
+  .section-header.text-left{
+    margin-bottom:0px; }
   @media only screen and (min-width: 750px) {
     .section-header {
       margin-bottom: 55px; } }
+
+/*======= Custom HTML on Home Page ===========*/
+.custom-html-h1{ font-size: 84pt; margin-bottom: 105px; }
+  @media only screen and (max-width: 875px){
+    .custom-html-h1{ font-size: 63pt; } }
+  @media only screen and (max-width: 650px){
+    .custom-html-h1{ font-size: 42pt; } }
+
 
 /*================ Typography ================*/
 blockquote {

@@ -26,11 +26,11 @@
       "hero-1": {
         "type": "hero",
         "settings": {
-          "image": "shopify:\/\/shop_images\/groom-adjusting-cufflinks.jpg",
+          "image": "shopify:\/\/shop_images\/Fabrissance-Hero.png",
           "alignment": "top",
-          "hero_layout": "full_width",
-          "hero_size": "large",
-          "text_size": "large",
+          "hero_layout": "fixed_width",
+          "hero_size": "small",
+          "text_size": "medium",
           "title": "",
           "text": "",
           "button_label": ""
@@ -48,7 +48,6 @@
       },
       "feature-columns": {
         "type": "feature-columns",
-        "disabled": true,
         "blocks": {
           "feature-columns-0": {
             "type": "text_block",
@@ -98,19 +97,6 @@
           "rows": 1,
           "show_vendor": false,
           "show_view_all": false
-        }
-      },
-      "hero-2": {
-        "type": "hero",
-        "disabled": true,
-        "settings": {
-          "alignment": "center",
-          "hero_layout": "full_width",
-          "hero_size": "medium",
-          "text_size": "large",
-          "title": "Image with text overlay",
-          "text": "<p>Use overlay text to give your customers insight into your brand. Select imagery and text that relates to your style and story.<\/p>",
-          "button_label": ""
         }
       },
       "quotes": {
@@ -172,12 +158,20 @@
               "alignment": "center",
               "cta_label": ""
             }
+          },
+          "dc6a36f5-fab5-4ccd-8317-c52585f55f67": {
+            "type": "image",
+            "settings": {
+              "alignment": "center",
+              "cta_label": ""
+            }
           }
         },
         "block_order": [
           "image-bar-0",
           "image-bar-1",
-          "image-bar-2"
+          "image-bar-2",
+          "dc6a36f5-fab5-4ccd-8317-c52585f55f67"
         ],
         "settings": {
           "section_height": "medium"
@@ -209,7 +203,8 @@
           "color_footer_bg": "#f6f6f6",
           "color_footer_text": "#333232",
           "show_locale_selector": false,
-          "show_currency_selector": false
+          "show_currency_selector": false,
+          "footer_linklist": "footer"
         }
       },
       "1611776191d011e6f3": {
@@ -275,13 +270,10 @@
     },
     "content_for_index": [
       "hero-1",
-      "feature-row",
-      "feature-columns",
+      "image-bar",
       "collection",
       "1611776191d011e6f3",
-      "hero-2",
-      "quotes",
-      "image-bar"
+      "testing"
     ]
   },
   "presets": {
