@@ -1,3 +1,89 @@
-<div>
-    <p>This will be the return form</p>
+<div class="contact-form form-vertical">
+    {%- assign formId = 'ContactForm' -%}
+    {% form 'contact', id: formId %}
+    {% include 'form-status', form: form, form_id: formId %}
+
+    {% comment %} Name {% endcomment %}
+    <label for="{{ formId }}-name">{{ 'contact.form.name' | t }}</label>
+    <input type="text" id="{{ formId }}-name" name="contact[{{ 'contact.form.name' | t }}]" value="{% if form[name] %}{{ form[name] }}{% elsif customer %}{{ customer.name }}{% endif %}">
+
+    {% comment %} Email {% endcomment %}
+    <label for="{{ formId }}-email">{{ 'contact.form.email' | t }} <span aria-hidden="true">*</span></label>
+    <input
+        type="email"
+        id="{{ formId }}-email"
+        name="contact[email]"
+        autocorrect="off"
+        autocapitalize="off"
+        value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+        aria-required="true"
+        {%- if form.errors contains 'email' -%}
+        class="input--error"
+        aria-invalid="true"
+        aria-describedby="{{ formId }}-email-error"
+        {%- endif -%} >
+
+    {%- if form.errors contains 'email' -%}
+    <span id="{{ formId}}-email-error" class="input-error-message">
+        <span class="visually-hidden">{{ 'general.accessibility.error' | t }} </span>
+        {% include 'icon-error' %}
+        <span>{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}.</span>
+    </span>
+    {%- endif -%}
+
+    <br>
+    <br>
+    <p> If you have any of the below information it will help us process the return faster. </p>
+
+    <label for="ContactFormOrderNumber">Order Number</label>
+    <input
+        type="text"
+        id="ContactFormOrderNumber"
+        name="contact[OrderNumber]"
+        placeholder="Order Number" />
+
+    <label for="ContactForm">Item Name</label>
+    <input
+        type="text"
+        id="ContactForm"
+        name="contact[]"
+        placeholder="" />
+
+    <label for="ContactForm">Order Date</label>
+    <input
+        type="text"
+        id="ContactForm"
+        name="contact[]"
+        placeholder="" />
+
+    <br>
+    <br>
+    {% comment %} Reason for Return {% endcomment %}
+    <label for="ContactFormFlavor">Reason for Return</label>
+    <select id="ContactFormFlavor" name="contact[Flavor]">
+        <option> ----- </option>
+        <option>Wrong Size</option>
+        <option>Wrong Item</option>
+        <option>Wrong Colors</option>
+        <option>Product Didn't Match Description</option>
+        <option>Product No Longer Needed</option>
+        <option>Product Did Not Meet Expectations / Needs</option>
+        <option>Other</option>
+    </select>
+
+    {% comment %} TextArea {% endcomment %}
+    <label for="{{ formId }}-message">Feedback</label>
+    <textarea
+        rows="10"
+        id="{{ formId }}-message"
+        name="contact[{{ 'contact.form.message' | t }}]">{% if form.body %}{{ form.body }}{% endif %}
+    </textarea>
+
+    {% comment %} Button {% endcomment %}
+    <input
+        type="submit"
+        class="btn"
+        value="{{ 'contact.form.submit' | t }}">
+
+    {% endform %}
 </div>
