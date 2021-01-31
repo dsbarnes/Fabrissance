@@ -5,7 +5,11 @@
 
     {% comment %} Name {% endcomment %}
     <label for="{{ formId }}-name">{{ 'contact.form.name' | t }}</label>
-    <input type="text" id="{{ formId }}-name" name="contact[{{ 'contact.form.name' | t }}]" value="{% if form[name] %}{{ form[name] }}{% elsif customer %}{{ customer.name }}{% endif %}">
+    <input
+        type="text"
+        id="{{ formId }}-name"
+        name="contact[{{ 'contact.form.name' | t }}]"
+        value="{% if form[name] %}{{ form[name] }}{% elsif customer %}{{ customer.name }}{% endif %}">
 
     {% comment %} Email {% endcomment %}
     <label for="{{ formId }}-email">{{ 'contact.form.email' | t }} <span aria-hidden="true">*</span></label>
@@ -40,27 +44,27 @@
         type="text"
         id="ContactFormOrderNumber"
         name="contact[OrderNumber]"
-        placeholder="Order Number" />
+        placeholder="" />
 
     <label for="ContactForm">Item Name</label>
     <input
         type="text"
-        id="ContactForm"
-        name="contact[]"
+        id="ContactFormItemName"
+        name="contact[ItemName]"
         placeholder="" />
 
     <label for="ContactForm">Order Date</label>
     <input
         type="text"
-        id="ContactForm"
-        name="contact[]"
+        id="ContactFormOrderDate"
+        name="contact[OrderDate]"
         placeholder="" />
 
     <br>
     <br>
     {% comment %} Reason for Return {% endcomment %}
-    <label for="ContactFormFlavor">Reason for Return</label>
-    <select id="ContactFormFlavor" name="contact[Flavor]">
+    <label for="ContactFormReason">Reason for Return</label>
+    <select id="ContactFormReason" name="contact[Reason]">
         <option> ----- </option>
         <option>Wrong Size</option>
         <option>Wrong Item</option>
