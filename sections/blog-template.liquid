@@ -113,6 +113,7 @@
       <li class="border-top">
         <div class="page-width">
           <div class="grid">
+            <div class="grid__item medium-up--five-sixths medium-up--push-one-twelfth">
               <div class="article-listing">
                 <h2 class="article__title h3"><a href="{{ article.url }}">{{ article.title }}</a></h2>
                 {% if section.settings.blog_show_author %}
@@ -130,18 +131,14 @@
                   {% capture img_wrapper_id %}ArticleImageWrapper-{{ article.image.id }}{% endcapture %}
                   {%- assign img_url = article.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
 
-                  {% include 'image-style', image: article.image, height: 250, wrapper_id: img_wrapper_id, img_id: img_id %}
+                  {% include 'image-style', image: article.image, height: 600, wrapper_id: img_wrapper_id, img_id: img_id %}
 
                   <div id="{{ img_wrapper_id }}" class="article__list-image-wrapper js">
-                    <a
-                    href="{{ article.url }}"
-                    {% comment %} style="padding-top:{{ 1 | divided_by: article.image.aspect_ratio | times: 100 }}%;" {% endcomment %}
-                    class="article__list-image-container" data-image-loading-animation>
-
+                    <a href="{{ article.url }}" style="padding-top:{{ 1 | divided_by: article.image.aspect_ratio | times: 100 }}%;" class="article__list-image-container" data-image-loading-animation>
                       <img id="{{ img_id }}"
                            class="article__list-image lazyload"
                            data-src="{{ img_url }}"
-                           {% comment %} data-widths="[180, 360, 540, 720, 905, 1090, 1296, 1512, 1728, 2048]" {% endcomment %}
+                           data-widths="[180, 360, 540, 720, 905, 1090, 1296, 1512, 1728, 2048]"
                            data-aspectratio="{{ article.image.aspect_ratio }}"
                            data-sizes="auto"
                            alt="">
@@ -163,23 +160,6 @@
                   {% else %}
                     {{ article.content | strip_html | truncate: 150 }}
                   {% endif %}
-
-                  <ul class="list--inline article__meta-buttons">
-                    <li>
-                      <a href="{{ article.url }}" class="btn btn--tertiary btn--small" aria-label="{{ 'blogs.article.read_more_title' | t: title: article.title }}">
-                        {{ 'blogs.article.read_more' | t }}
-                      </a>
-                    </li>
-
-                    {% if blog.comments_enabled? and article.comments_count > 0 %}
-                      <li>
-                        <a href="{{ article.url }}#comments" class="article__comment-count btn btn--tertiary btn--small">
-                          {{ 'blogs.comments.comments_with_count' | t: count: article.comments_count }}
-                        </a>
-                      </li>
-                    {% endif %}
-                  </ul>
-
                 </div>
 
                 {% if article.tags.size > 0 %}
@@ -190,7 +170,24 @@
                     {% endfor %}
                   </div>
                 {% endif %}
+
+                <ul class="list--inline article__meta-buttons">
+                  <li>
+                    <a href="{{ article.url }}" class="btn btn--tertiary btn--small" aria-label="{{ 'blogs.article.read_more_title' | t: title: article.title }}">
+                      {{ 'blogs.article.read_more' | t }}
+                    </a>
+                  </li>
+
+                  {% if blog.comments_enabled? and article.comments_count > 0 %}
+                    <li>
+                      <a href="{{ article.url }}#comments" class="article__comment-count btn btn--tertiary btn--small">
+                        {{ 'blogs.comments.comments_with_count' | t: count: article.comments_count }}
+                      </a>
+                    </li>
+                  {% endif %}
+                </ul>
               </div>
+            </div>
           </div>
         </div>
       </li>

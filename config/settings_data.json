@@ -1,80 +1,35 @@
 {
   "current": {
-    "type_header_font": "avenir_next_n4",
-    "type_header_base_size": 31,
-    "type_base_font": "avenir_next_n2",
-    "type_base_size": 14,
-    "social_twitter_link": "twitter.com",
-    "social_pinterest_link": "pinterest.com",
-    "social_instagram_link": "instagram.com",
-    "social_youtube_link": "youtube.com",
     "sections": {
       "header": {
         "type": "header",
-        "settings": {
-          "align_logo": "left",
-          "logo": "shopify:\/\/shop_images\/Fabrissance-Logo.png",
-          "logo_max_width": 150,
-          "main_linklist": "main-menu",
-          "message": false,
-          "home_page_only": false,
-          "message_text": "Announce something here",
-          "color_bg": "#3a3a3a",
-          "color_text": "#ffffff"
-        }
+        "settings": {}
       },
       "hero-1": {
         "type": "hero",
         "settings": {
-          "image": "shopify:\/\/shop_images\/Fabrissance-Hero.png",
-          "alignment": "top",
-          "hero_layout": "fixed_width",
-          "hero_size": "small",
-          "text_size": "medium",
-          "title": "",
-          "text": "",
-          "button_label": ""
+          "hero_size": "large",
+          "text_size": "large"
         }
       },
       "feature-row": {
         "type": "feature-row",
-        "disabled": true,
-        "settings": {
-          "layout": "left",
-          "title": "Image with text",
-          "text": "<p>Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-          "button_label": ""
-        }
+        "settings": {}
       },
       "feature-columns": {
         "type": "feature-columns",
         "blocks": {
           "feature-columns-0": {
             "type": "text_block",
-            "settings": {
-              "enable_image": true,
-              "title": "Add a title or tagline",
-              "text": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.<\/p>",
-              "button_label": ""
-            }
+            "settings": {}
           },
           "feature-columns-1": {
             "type": "text_block",
-            "settings": {
-              "enable_image": true,
-              "title": "Add a title or tagline",
-              "text": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.<\/p>",
-              "button_label": ""
-            }
+            "settings": {}
           },
           "feature-columns-2": {
             "type": "text_block",
-            "settings": {
-              "enable_image": true,
-              "title": "Add a title or tagline",
-              "text": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.<\/p>",
-              "button_label": ""
-            }
+            "settings": {}
           }
         },
         "block_order": [
@@ -83,46 +38,35 @@
           "feature-columns-2"
         ],
         "settings": {
-          "title": "",
-          "align_text": "left"
+          "title": ""
         }
       },
       "collection": {
         "type": "collection",
         "settings": {
-          "title": "Codename: Test",
-          "collection": "costume-one",
-          "url": "shopify:\/\/collections\/costume-one",
-          "grid": 4,
-          "rows": 1,
-          "show_vendor": false,
-          "show_view_all": false
+          "grid": 4
+        }
+      },
+      "hero-2": {
+        "type": "hero",
+        "settings": {
+          "text_size": "large"
         }
       },
       "quotes": {
         "type": "quotes",
-        "disabled": true,
         "blocks": {
           "quotes-0": {
             "type": "quote",
-            "settings": {
-              "quote": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.<\/p>",
-              "author": "Author's name"
-            }
+            "settings": {}
           },
           "quotes-1": {
             "type": "quote",
-            "settings": {
-              "quote": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.<\/p>",
-              "author": "Author's name"
-            }
+            "settings": {}
           },
           "quotes-2": {
             "type": "quote",
-            "settings": {
-              "quote": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.<\/p>",
-              "author": "Author's name"
-            }
+            "settings": {}
           }
         },
         "block_order": [
@@ -136,144 +80,56 @@
       },
       "image-bar": {
         "type": "image-bar",
-        "disabled": true,
         "blocks": {
           "image-bar-0": {
             "type": "image",
-            "settings": {
-              "alignment": "center",
-              "cta_label": ""
-            }
+            "settings": {}
           },
           "image-bar-1": {
             "type": "image",
-            "settings": {
-              "alignment": "center",
-              "cta_label": ""
-            }
+            "settings": {}
           },
           "image-bar-2": {
             "type": "image",
-            "settings": {
-              "alignment": "center",
-              "cta_label": ""
-            }
-          },
-          "dc6a36f5-fab5-4ccd-8317-c52585f55f67": {
-            "type": "image",
-            "settings": {
-              "alignment": "center",
-              "cta_label": ""
-            }
+            "settings": {}
           }
         },
         "block_order": [
           "image-bar-0",
           "image-bar-1",
-          "image-bar-2",
-          "dc6a36f5-fab5-4ccd-8317-c52585f55f67"
+          "image-bar-2"
         ],
-        "settings": {
-          "section_height": "medium"
-        }
+        "settings": {}
       },
       "footer": {
         "type": "footer",
         "blocks": {
-          "2f9c91c7-c710-4608-bd3a-a317ac31d4ff": {
-            "type": "text",
-            "settings": {
-              "title": "Get Involved",
-              "text": "<p>Share store details, promotions, or brand content with your customers.<\/p>"
-            }
+          "footer-0": {
+            "type": "link_list",
+            "settings": {}
           },
           "footer-1": {
             "type": "newsletter",
-            "settings": {
-              "title": "Sign up for our Newsletter"
-            }
+            "settings": {}
           }
         },
         "block_order": [
-          "2f9c91c7-c710-4608-bd3a-a317ac31d4ff",
+          "footer-0",
           "footer-1"
         ],
         "settings": {
-          "show_payment_icons": false,
-          "color_footer_bg": "#f6f6f6",
-          "color_footer_text": "#333232",
-          "show_locale_selector": false,
-          "show_currency_selector": false,
-          "footer_linklist": "footer"
-        }
-      },
-      "1611776191d011e6f3": {
-        "type": "collection",
-        "settings": {
-          "title": "Codename: Grunge 91",
-          "collection": "collection-two",
-          "url": "shopify:\/\/collections\/collection-two",
-          "grid": 4,
-          "rows": 1,
-          "show_vendor": false,
-          "show_view_all": false
-        }
-      },
-      "blog-template": {
-        "type": "blog-template",
-        "settings": {
-          "layout": "list",
-          "blog_show_author": false,
-          "blog_show_date": false
-        }
-      },
-      "article-template": {
-        "type": "article-template",
-        "settings": {
-          "blog_show_author": false,
-          "blog_show_date": false,
-          "show_share_buttons": true
-        }
-      },
-      "collection-template": {
-        "type": "collection-template",
-        "settings": {
-          "layout": "grid",
-          "grid": 4,
-          "rows": 2,
-          "show_collection_image": true,
-          "show_vendor": false,
-          "sort_enable": false,
-          "tags_enable": false
-        }
-      },
-      "product-template": {
-        "type": "product-template",
-        "settings": {
-          "show_quantity_selector": false,
-          "show_vendor": false,
-          "enable_payment_button": true,
-          "show_share_buttons": true,
-          "media_size": "medium",
-          "enable_image_zoom": true,
-          "enable_video_looping": false
-        }
-      },
-      "product-recommendations": {
-        "type": "product-recommendations",
-        "settings": {
-          "show_product_recommendations": true,
-          "heading": "You may also like",
-          "show_vendor": false
+          "show_payment_icons": true
         }
       }
     },
     "content_for_index": [
       "hero-1",
-      "image-bar",
+      "feature-row",
+      "feature-columns",
       "collection",
-      "1611776191d011e6f3",
-      "testing"
+      "hero-2",
+      "quotes",
+      "image-bar"
     ]
   },
   "presets": {
